@@ -1,7 +1,4 @@
-"use client";
-
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { FloatingMedicalStickers, StethoscopeIcon, HeartbeatIcon, CaduceusIcon } from "./MedicalIcons";
 
 export default function Hero() {
@@ -162,12 +159,10 @@ export default function Hero() {
               <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-2xl" />
               
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-white shadow-2xl ring-4 ring-primary/10">
-                <Image
+                <img
                   src="/doctor.jpg"
                   alt="Dr. Md. Khairul Islam"
-                  fill
-                  className="object-cover"
-                  priority
+                  className="w-full h-full object-cover"
                 />
               </div>
 

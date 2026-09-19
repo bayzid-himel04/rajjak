@@ -1,6 +1,3 @@
-"use client";
-
-import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CaduceusIcon } from "./MedicalIcons";
@@ -36,7 +33,7 @@ export default function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center gap-3 group">
+          <a href="#" className="flex items-center gap-3 group">
             <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-md">
               <CaduceusIcon className="w-6 h-6 text-white" />
             </div>
@@ -48,18 +45,18 @@ export default function Navbar() {
                 Orthopedic Surgeon
               </span>
             </div>
-          </Link>
+          </a>
 
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <Link
+              <a
                 key={link.href}
                 href={link.href}
                 className="text-sm font-medium text-muted hover:text-primary transition-colors relative group"
               >
                 {link.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
-              </Link>
+              </a>
             ))}
           </div>
 
@@ -103,14 +100,14 @@ export default function Navbar() {
               className="md:hidden border-t border-border overflow-hidden"
             >
               {navLinks.map((link) => (
-                <Link
+                <a
                   key={link.href}
                   href={link.href}
                   className="block py-3 px-4 text-sm font-medium text-muted hover:text-primary hover:bg-surface transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}
-                </Link>
+                </a>
               ))}
             </motion.div>
           )}

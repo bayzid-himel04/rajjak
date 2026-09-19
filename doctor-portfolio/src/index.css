@@ -12,6 +12,8 @@
   --border: #bae6fd;
   --muted: #64748b;
   --medical-green: #10b981;
+  --font-inter: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-playfair: "Playfair Display", Georgia, serif;
 }
 
 @theme inline {
@@ -33,6 +35,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
+  font-family: var(--font-sans);
 }
 
 html {

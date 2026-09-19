@@ -9,18 +9,20 @@ import Goals from "@/components/Goals";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
-export default function Home() {
+export default function App() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <About />
-      <Education />
-      <Experience />
-      <Interests />
-      <Courses />
-      <Goals />
-      <Contact />
+      <main className="flex-1">
+        <Hero />
+        <About />
+        <Education />
+        <Experience />
+        <Interests />
+        <Courses />
+        <Goals />
+        <Contact />
+      </main>
       <Footer />
     </>
   );

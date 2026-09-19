@@ -1,5 +1,3 @@
-"use client";
-
 import { StaggerContainer, StaggerItem, AnimatedSection } from "./AnimatedSection";
 
 const interests = [

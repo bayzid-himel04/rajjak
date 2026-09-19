@@ -1,7 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { AnimatedSection } from "./AnimatedSection";
 import { MedicalCrossIcon } from "./MedicalIcons";
 
 export default function Footer() {

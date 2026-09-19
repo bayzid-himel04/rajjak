@@ -1,5 +1,3 @@
-"use client";
-
 import { motion } from "framer-motion";
 
 export function StethoscopeIcon({ className = "w-6 h-6" }: { className?: string }) {

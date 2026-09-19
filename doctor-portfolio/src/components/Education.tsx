@@ -1,5 +1,3 @@
-"use client";
-
 import { AnimatedSection, StaggerContainer, StaggerItem } from "./AnimatedSection";
 
 const qualifications = [
