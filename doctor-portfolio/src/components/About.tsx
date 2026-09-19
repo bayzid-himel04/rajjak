@@ -54,30 +54,30 @@ const highlights = [
 
 export default function About() {
   return (
-    <section id="about" className="py-20 bg-white relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/2" />
-      <div className="absolute bottom-0 left-0 w-48 h-48 bg-accent/5 rounded-full translate-y-1/2 -translate-x-1/2" />
+    <section id="about" className="py-12 sm:py-16 lg:py-20 bg-white relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-48 sm:w-64 h-48 sm:h-64 bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-36 sm:w-48 h-36 sm:h-48 bg-accent/5 rounded-full translate-y-1/2 -translate-x-1/2 pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <AnimatedSection className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 text-primary mb-4">
-            <MedicalCrossIcon className="w-5 h-5" />
-            <span className="text-sm font-medium uppercase tracking-wider">Professional Profile</span>
+        <AnimatedSection className="text-center mb-8 sm:mb-12">
+          <div className="inline-flex items-center gap-2 text-primary mb-3">
+            <MedicalCrossIcon className="w-4 h-4 sm:w-5 sm:h-5" />
+            <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">Professional Profile</span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mb-4">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3">
             About Dr. Khairul
           </h2>
-          <div className="w-16 h-1 bg-primary mx-auto rounded-full" />
+          <div className="w-12 sm:w-16 h-1 bg-primary mx-auto rounded-full" />
         </AnimatedSection>
 
         <AnimatedSection variant="fadeIn" delay={0.2}>
-          <div className="max-w-3xl mx-auto mb-12">
-            <div className="bg-gradient-to-br from-surface to-white rounded-2xl p-8 border border-border shadow-sm relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-1 h-full bg-primary" />
-              <div className="absolute top-4 right-4 opacity-10">
-                <MedicalCrossIcon className="w-16 h-16 text-primary" />
+          <div className="max-w-3xl mx-auto mb-8 sm:mb-12">
+            <div className="bg-gradient-to-br from-surface to-white rounded-2xl p-5 sm:p-8 border border-border shadow-sm relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-1 sm:w-1.5 h-full bg-primary" />
+              <div className="absolute top-4 right-4 opacity-10 pointer-events-none">
+                <MedicalCrossIcon className="w-12 h-12 sm:w-16 sm:h-16 text-primary" />
               </div>
-              <p className="text-lg text-muted leading-relaxed relative z-10">
+              <p className="text-sm sm:text-base lg:text-lg text-muted leading-relaxed relative z-10">
                 Orthopedic resident with clinical experience in emergency medicine,
                 surgery, anatomy teaching, and orthopedic training. Currently
                 pursuing D-Ortho training at Rajshahi Medical College Hospital.
@@ -88,13 +88,13 @@ export default function About() {
           </div>
         </AnimatedSection>
 
-        <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {highlights.map((item, i) => (
             <StaggerItem key={i}>
-              <div className="text-center p-6 rounded-xl bg-gradient-to-br from-surface to-white border border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full group">
-                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+              <div className="text-center p-5 sm:p-6 rounded-xl bg-gradient-to-br from-surface to-white border border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full group">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:bg-primary group-hover:scale-105 transition-all duration-300">
                   <svg
-                    className="w-7 h-7 text-primary group-hover:text-white transition-colors"
+                    className="w-6 h-6 sm:w-7 sm:h-7 text-primary group-hover:text-white transition-colors"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -102,10 +102,10 @@ export default function About() {
                     {item.icon}
                   </svg>
                 </div>
-                <h3 className="font-semibold text-foreground mb-1">
+                <h3 className="font-semibold text-foreground text-sm sm:text-base mb-1">
                   {item.title}
                 </h3>
-                <p className="text-sm text-muted">{item.desc}</p>
+                <p className="text-xs sm:text-sm text-muted">{item.desc}</p>
               </div>
             </StaggerItem>
           ))}

@@ -10,31 +10,31 @@ const interests = [
 
 export default function Interests() {
   return (
-    <section id="interests" className="py-20 bg-surface relative overflow-hidden">
-      <div className="absolute top-0 left-1/2 w-80 h-80 bg-primary/5 rounded-full -translate-x-1/2 -translate-y-1/2" />
+    <section id="interests" className="py-12 sm:py-16 lg:py-20 bg-surface relative overflow-hidden">
+      <div className="absolute top-0 left-1/2 w-64 sm:w-80 h-64 sm:h-80 bg-primary/5 rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <AnimatedSection className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 text-primary mb-4">
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+        <AnimatedSection className="text-center mb-8 sm:mb-12">
+          <div className="inline-flex items-center gap-2 text-primary mb-3">
+            <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
             </svg>
-            <span className="text-sm font-medium uppercase tracking-wider">Specializations</span>
+            <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">Specializations</span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mb-4">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3">
             Areas of Interest
           </h2>
-          <div className="w-16 h-1 bg-primary mx-auto rounded-full" />
+          <div className="w-12 sm:w-16 h-1 bg-primary mx-auto rounded-full" />
         </AnimatedSection>
 
-        <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-6 max-w-4xl mx-auto">
           {interests.map((item, i) => (
             <StaggerItem key={i}>
-              <div className="bg-white rounded-xl p-6 border border-border hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group h-full relative overflow-hidden">
-                <div className={`absolute top-0 right-0 w-24 h-24 bg-gradient-to-br ${item.color} opacity-5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:opacity-10 transition-opacity`} />
-                <div className={`w-14 h-14 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg`}>
+              <div className="bg-white rounded-xl p-5 sm:p-6 border border-border hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-full relative overflow-hidden flex items-center sm:block gap-4 sm:gap-0">
+                <div className={`absolute top-0 right-0 w-20 sm:w-24 h-20 sm:h-24 bg-gradient-to-br ${item.color} opacity-5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:opacity-10 transition-opacity pointer-events-none`} />
+                <div className={`w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center shrink-0 sm:mb-4 group-hover:scale-105 transition-transform shadow-md`}>
                   <svg
-                    className="w-7 h-7 text-white"
+                    className="w-6 h-6 sm:w-7 sm:h-7 text-white"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -42,7 +42,7 @@ export default function Interests() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={item.icon} />
                   </svg>
                 </div>
-                <h3 className="font-bold text-foreground">{item.title}</h3>
+                <h3 className="font-bold text-foreground text-sm sm:text-base leading-snug">{item.title}</h3>
               </div>
             </StaggerItem>
           ))}

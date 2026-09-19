@@ -33,32 +33,32 @@ const qualifications = [
 
 export default function Education() {
   return (
-    <section id="education" className="py-20 bg-surface relative overflow-hidden">
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-primary/5 rounded-full -translate-x-1/2 -translate-y-1/2" />
+    <section id="education" className="py-12 sm:py-16 lg:py-20 bg-surface relative overflow-hidden">
+      <div className="absolute top-1/2 left-0 w-72 sm:w-96 h-72 sm:h-96 bg-primary/5 rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <AnimatedSection className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 text-primary mb-4">
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+        <AnimatedSection className="text-center mb-8 sm:mb-12">
+          <div className="inline-flex items-center gap-2 text-primary mb-3">
+            <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24">
               <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z" />
             </svg>
-            <span className="text-sm font-medium uppercase tracking-wider">Academic Background</span>
+            <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">Academic Background</span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mb-4">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3">
             Education & Qualifications
           </h2>
-          <div className="w-16 h-1 bg-primary mx-auto rounded-full" />
+          <div className="w-12 sm:w-16 h-1 bg-primary mx-auto rounded-full" />
         </AnimatedSection>
 
-        <StaggerContainer className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-4xl mx-auto">
           {qualifications.map((qual, i) => (
             <StaggerItem key={i}>
-              <div className="bg-white rounded-xl p-6 border border-border shadow-sm hover:shadow-lg transition-all duration-300 h-full group relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-20 h-20 bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-primary/10 transition-colors" />
-                <div className="flex items-start gap-4 relative z-10">
-                  <div className="w-14 h-14 bg-gradient-to-br from-primary/10 to-primary/20 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+              <div className="bg-white rounded-xl p-4 sm:p-6 border border-border shadow-sm hover:shadow-lg transition-all duration-300 h-full group relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-16 sm:w-20 h-16 sm:h-20 bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-primary/10 transition-colors pointer-events-none" />
+                <div className="flex items-start gap-3 sm:gap-4 relative z-10">
+                  <div className="w-11 h-11 sm:w-14 sm:h-14 bg-gradient-to-br from-primary/10 to-primary/20 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                     <svg
-                      className="w-7 h-7 text-primary"
+                      className="w-5 h-5 sm:w-7 sm:h-7 text-primary"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -71,14 +71,14 @@ export default function Education() {
                       />
                     </svg>
                   </div>
-                  <div className="flex-1">
-                    <h3 className="font-bold text-foreground text-lg mb-1">
+                  <div className="flex-1 min-w-0">
+                    <h3 className="font-bold text-foreground text-base sm:text-lg mb-1 leading-snug">
                       {qual.degree}
                     </h3>
-                    <p className="text-primary text-sm font-medium mb-1">{qual.institution}</p>
-                    <p className="text-muted text-xs mb-2">{qual.year}</p>
+                    <p className="text-primary text-xs sm:text-sm font-medium mb-1 truncate">{qual.institution}</p>
+                    <p className="text-muted text-[11px] sm:text-xs mb-2.5">{qual.year}</p>
                     <span
-                      className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold ${
+                      className={`inline-flex items-center gap-1 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full text-[11px] sm:text-xs font-semibold ${
                         qual.status === "In Progress"
                           ? "bg-amber-100 text-amber-700"
                           : "bg-green-100 text-green-700"

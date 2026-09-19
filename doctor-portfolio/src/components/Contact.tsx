@@ -2,36 +2,36 @@ import { AnimatedSection, StaggerContainer, StaggerItem } from "./AnimatedSectio
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 bg-surface relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-72 h-72 bg-accent/5 rounded-full translate-x-1/3 -translate-y-1/3" />
+    <section id="contact" className="py-12 sm:py-16 lg:py-20 bg-surface relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-48 sm:w-72 h-48 sm:h-72 bg-accent/5 rounded-full translate-x-1/3 -translate-y-1/3 pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <AnimatedSection className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 text-primary mb-4">
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+        <AnimatedSection className="text-center mb-8 sm:mb-12">
+          <div className="inline-flex items-center gap-2 text-primary mb-3">
+            <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24">
               <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
             </svg>
-            <span className="text-sm font-medium uppercase tracking-wider">Reach Out</span>
+            <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">Reach Out</span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mb-4">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3">
             Get in Touch
           </h2>
-          <div className="w-16 h-1 bg-primary mx-auto rounded-full" />
-          <p className="text-muted mt-4 max-w-md mx-auto">
+          <div className="w-12 sm:w-16 h-1 bg-primary mx-auto rounded-full mb-3" />
+          <p className="text-muted text-xs sm:text-sm max-w-md mx-auto px-2">
             For consultations or professional inquiries, feel free to reach out via phone or email.
           </p>
         </AnimatedSection>
 
-        <StaggerContainer className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 max-w-2xl mx-auto">
           <StaggerItem>
             <a
               href="tel:01684200026"
-              className="flex flex-col items-center text-center p-8 bg-white rounded-2xl border border-border hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group h-full relative overflow-hidden"
+              className="flex flex-col items-center text-center p-6 sm:p-8 bg-white rounded-2xl border border-border hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-full relative overflow-hidden active:scale-[0.98]"
             >
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-accent" />
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-primary group-hover:scale-110 transition-all">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-primary/10 rounded-full flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-primary group-hover:scale-105 transition-all">
                 <svg
-                  className="w-7 h-7 text-primary group-hover:text-white transition-colors"
+                  className="w-6 h-6 sm:w-7 sm:h-7 text-primary group-hover:text-white transition-colors"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -44,9 +44,9 @@ export default function Contact() {
                   />
                 </svg>
               </div>
-              <h3 className="font-bold text-foreground text-lg mb-1">Phone</h3>
-              <p className="text-muted">01684200026</p>
-              <span className="mt-3 text-xs text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+              <h3 className="font-bold text-foreground text-base sm:text-lg mb-1">Phone Consultation</h3>
+              <p className="text-primary font-semibold text-base sm:text-lg tracking-wide">01684200026</p>
+              <span className="mt-2 text-xs text-primary font-medium bg-primary/5 px-3 py-1 rounded-full sm:opacity-0 sm:group-hover:opacity-100 transition-opacity">
                 Tap to call
               </span>
             </a>
@@ -55,12 +55,12 @@ export default function Contact() {
           <StaggerItem>
             <a
               href="mailto:khairulislam713@gmail.com"
-              className="flex flex-col items-center text-center p-8 bg-white rounded-2xl border border-border hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group h-full relative overflow-hidden"
+              className="flex flex-col items-center text-center p-6 sm:p-8 bg-white rounded-2xl border border-border hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group h-full relative overflow-hidden active:scale-[0.98]"
             >
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent to-primary" />
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-primary group-hover:scale-110 transition-all">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-primary/10 rounded-full flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-primary group-hover:scale-105 transition-all">
                 <svg
-                  className="w-7 h-7 text-primary group-hover:text-white transition-colors"
+                  className="w-6 h-6 sm:w-7 sm:h-7 text-primary group-hover:text-white transition-colors"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -73,11 +73,11 @@ export default function Contact() {
                   />
                 </svg>
               </div>
-              <h3 className="font-bold text-foreground text-lg mb-1">Email</h3>
-              <p className="text-muted break-all text-sm">
+              <h3 className="font-bold text-foreground text-base sm:text-lg mb-1">Email Inquiries</h3>
+              <p className="text-primary font-semibold text-sm sm:text-base break-all">
                 khairulislam713@gmail.com
               </p>
-              <span className="mt-3 text-xs text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+              <span className="mt-2 text-xs text-primary font-medium bg-primary/5 px-3 py-1 rounded-full sm:opacity-0 sm:group-hover:opacity-100 transition-opacity">
                 Tap to email
               </span>
             </a>
@@ -85,10 +85,10 @@ export default function Contact() {
         </StaggerContainer>
 
         <AnimatedSection variant="fadeIn" delay={0.4}>
-          <div className="mt-12 text-center">
-            <div className="inline-flex items-center gap-3 bg-white px-6 py-3 rounded-full border border-border shadow-sm">
+          <div className="mt-8 sm:mt-12 text-center">
+            <div className="inline-flex items-center gap-2 sm:gap-3 bg-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-full border border-border shadow-sm">
               <svg
-                className="w-5 h-5 text-primary"
+                className="w-4 h-4 sm:w-5 sm:h-5 text-primary shrink-0"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -100,7 +100,7 @@ export default function Contact() {
                   d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
                 />
               </svg>
-              <span className="text-sm text-muted">
+              <span className="text-xs sm:text-sm text-muted">
                 Languages:{" "}
                 <strong className="text-foreground">Bengali</strong> |{" "}
                 <strong className="text-foreground">English</strong>
